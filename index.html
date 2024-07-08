@@ -10,45 +10,18 @@
     <style>
         .img {
             height: 300px;
-
         }
-        
     </style>
     <img src="dice.png" class="img" id="img">
     <button type="button" class="btn" id="btn" onclick="change()">roll</button>
 
-
     <script>
         function change() {
-            const img=document.getElementById("img");
-            const num = Math.floor(Math.random() * (7 - 1))+1;
-
-            switch (num) {
-                case 1:
-                    img.src="1.png";
-                    break;
-                case 2:
-                    img.src="2.png";
-                    break;
-
-                case 3:
-                    img.src="3.png";
-                    break;
-
-                case 4:
-                    img.src="4.png";
-                    break;
-
-                case '5':
-                    img.src="5.png";
-                    break;
-
-                case '6':
-                    img.src="6.png";
-                    break;
-
-            }
+            const img = document.getElementById("img");
+            const num = Math.floor(Math.random() * (7 - 1)) + 1;
+             num==num? img.src = `${num}.png`: img.src = `${num}.png`
         }
+               
     </script>
 </body>
 
